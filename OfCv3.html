@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Separate Together TU/e × UU Waste Guide</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --green-deep:    #162e1e;
+  --green-mid:     #245c38;
+  --green-bright:  #3a8f5a;
+  --green-accent:  #7ec850;
+  --cream:         #f3f6f0;
+  --cream-dark:    #e8ede4;
+  --white:         #ffffff;
+  --text:          #18261e;
+  --grey:          #567060;
+  --grey-light:    #8fa490;
+  --tue-red:       #cc2200;
+  --tue-red-dark:  #8a1500;
+  --tue-red-light: #fce8e4;
+  --uu-gold:       #f0b800;
+  --uu-gold-dark:  #9a7400;
+  --uu-gold-light: #fffbd0;
+  --radius:        12px;
+  --radius-lg:     20px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--text);line-height:1.6;}
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-track{background:var(--cream);}
+::-webkit-scrollbar-thumb{background:var(--green-bright);border-radius:3px;}
+
+/* NAV */
+nav{background:var(--green-deep);display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:60px;position:sticky;top:0;z-index:300;gap:1rem;}
+.nav-brand{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.nav-logo-img{height:28px;width:auto;object-fit:contain;}
+.nav-logo-img.tue{filter:brightness(0) saturate(100%) invert(28%) sepia(80%) saturate(700%) hue-rotate(340deg) brightness(110%);}
+.nav-logo-img.uu{filter:brightness(0) invert(1);height:24px;}
+.nav-vsep{width:1px;height:26px;background:rgba(255,255,255,0.18);}
+.nav-links{display:flex;align-items:center;gap:2px;list-style:none;}
+.nav-links a{color:rgba(255,255,255,0.6);text-decoration:none;font-size:0.78rem;font-weight:500;padding:5px 10px;border-radius:999px;transition:all 0.18s;white-space:nowrap;}
+.nav-links a:hover{background:rgba(255,255,255,0.1);color:#fff;}
+.nav-uni{display:flex;gap:6px;list-style:none;padding-left:0.75rem;border-left:1px solid rgba(255,255,255,0.12);}
+.nav-uni a{font-family:'Space Grotesk',sans-serif;font-size:0.73rem;font-weight:700;padding:4px 11px;border-radius:999px;text-decoration:none;transition:all 0.18s;}
+.nav-uni a.t{background:rgba(204,34,0,0.22);color:#ff9988;}
+.nav-uni a.t:hover{background:var(--tue-red);color:#fff;}
+.nav-uni a.u{background:rgba(240,184,0,0.18);color:#f5d060;}
+.nav-uni a.u:hover{background:var(--uu-gold);color:var(--text);}
+
+/* HERO */
+.hero{background:var(--green-deep);position:relative;overflow:hidden;padding:5.5rem 2rem 4.5rem;}
+.hero-glow{position:absolute;inset:0;pointer-events:none;background:
+  radial-gradient(ellipse 55% 90% at 12% 65%, rgba(204,34,0,0.13) 0%,transparent 60%),
+  radial-gradient(ellipse 55% 90% at 88% 65%, rgba(240,184,0,0.10) 0%,transparent 60%),
+  radial-gradient(ellipse 60% 45% at 50% 100%, rgba(126,200,80,0.12) 0%,transparent 55%);}
+.hero-inner{max-width:1000px;margin:0 auto;position:relative;}
+.collab-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(126,200,80,0.1);border:1px solid rgba(126,200,80,0.28);border-radius:999px;padding:5px 14px 5px 8px;margin-bottom:1.75rem;font-size:0.72rem;color:var(--green-accent);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;}
+.collab-badge-logos{display:flex;align-items:center;gap:6px;}
+.collab-logo{height:16px;width:auto;object-fit:contain;}
+.collab-logo.tue{filter:brightness(0) saturate(100%) invert(28%) sepia(80%) saturate(700%) hue-rotate(340deg) brightness(130%);}
+.collab-logo.uu{filter:brightness(0) invert(1) opacity(0.75);height:14px;}
+.hero-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(3rem,7vw,5.5rem);font-weight:800;letter-spacing:-0.04em;line-height:0.95;color:#fff;margin-bottom:1rem;}
+.hero-title .accent{color:var(--green-accent);}
+.hero-sub{font-size:1rem;color:rgba(255,255,255,0.48);max-width:520px;margin-bottom:2.5rem;}
+.hero-cards{display:grid;grid-template-columns:1fr 1fr;gap:1rem;max-width:860px;margin-bottom:3rem;}
+@media(max-width:600px){.hero-cards{grid-template-columns:1fr;}}
+.h-card{border-radius:var(--radius-lg);padding:1.75rem;border:1px solid;}
+.h-card.tue-c{background:linear-gradient(135deg,rgba(204,34,0,0.16),rgba(204,34,0,0.05));border-color:rgba(204,34,0,0.22);}
+.h-card.uu-c{background:linear-gradient(135deg,rgba(240,184,0,0.13),rgba(240,184,0,0.03));border-color:rgba(240,184,0,0.18);}
+.h-card-logo{height:24px;width:auto;object-fit:contain;margin-bottom:0.85rem;display:block;}
+.h-card-logo.tue{filter:brightness(0) saturate(100%) invert(28%) sepia(80%) saturate(700%) hue-rotate(340deg) brightness(130%);}
+.h-card-logo.uu{filter:brightness(0) invert(1) opacity(0.8);height:20px;}
+.h-card h3{font-family:'Space Grotesk',sans-serif;font-size:0.95rem;font-weight:700;color:#fff;margin-bottom:0.55rem;}
+.h-card ul{list-style:none;padding:0;}
+.h-card ul li{font-size:0.8rem;color:rgba(255,255,255,0.55);padding:2.5px 0;display:flex;gap:7px;align-items:flex-start;}
+.h-card ul li::before{content:'→';font-size:0.65rem;opacity:0.45;margin-top:3px;flex-shrink:0;}
+.hero-stats{display:flex;gap:2.5rem;flex-wrap:wrap;}
+.h-stat strong{display:block;font-family:'Space Grotesk',sans-serif;font-size:1.8rem;font-weight:800;color:var(--green-accent);letter-spacing:-0.03em;}
+.h-stat small{font-size:0.7rem;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:0.07em;line-height:1.5;}
+
+/* SECTIONS */
+.section{padding:5rem 2rem;}
+.s-inner{max-width:980px;margin:0 auto;}
+.eyebrow{font-family:'Space Grotesk',sans-serif;font-size:0.67rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;margin-bottom:0.5rem;}
+.eyebrow.g{color:var(--green-bright);}
+.eyebrow.r{color:var(--tue-red);}
+.eyebrow.gd{color:var(--uu-gold-dark);}
+.eyebrow.gr{color:var(--grey);}
+h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.55rem,3.2vw,2.15rem);font-weight:700;letter-spacing:-0.025em;line-height:1.18;color:var(--text);margin-bottom:0.8rem;}
+.lead{font-size:0.97rem;color:var(--grey);max-width:600px;margin-bottom:2.25rem;}
+
+/* WELCOME */
+#welcome{background:var(--green-deep);scroll-margin-top:60px;}
+#welcome h2{color:#fff;}
+#welcome .lead{color:rgba(255,255,255,0.5);}
+.w-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;margin-top:0.5rem;}
+@media(max-width:620px){.w-grid{grid-template-columns:1fr;}}
+.w-card{border-radius:var(--radius-lg);padding:1.75rem;border:1px solid;}
+.w-card.sh{background:rgba(126,200,80,0.08);border-color:rgba(126,200,80,0.2);grid-column:1/-1;}
+.w-card.tc{background:rgba(204,34,0,0.1);border-color:rgba(204,34,0,0.2);}
+.w-card.uc{background:rgba(240,184,0,0.08);border-color:rgba(240,184,0,0.15);}
+.w-eyebrow{font-family:'Space Grotesk',sans-serif;font-size:0.63rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.5rem;}
+.w-eyebrow.g{color:var(--green-accent);}
+.w-eyebrow.r{color:#ff8878;}
+.w-eyebrow.gd{color:var(--uu-gold);}
+.w-card h3{font-family:'Space Grotesk',sans-serif;font-size:0.95rem;font-weight:700;color:#fff;margin-bottom:0.55rem;}
+.w-card p{font-size:0.83rem;color:rgba(255,255,255,0.52);line-height:1.7;}
+.w-card ul{list-style:none;padding:0;}
+.w-card ul li{font-size:0.82rem;color:rgba(255,255,255,0.52);padding:3px 0;display:flex;gap:8px;align-items:flex-start;}
+.w-card ul li::before{content:'✓';opacity:0.45;flex-shrink:0;margin-top:1px;}
+
+/* GUIDE */
+#guide{background:var(--cream);scroll-margin-top:60px;}
+.c-tabs{display:flex;gap:0.5rem;margin-bottom:2rem;flex-wrap:wrap;}
+.ctab{font-family:'Space Grotesk',sans-serif;font-size:0.8rem;font-weight:700;padding:8px 20px;border-radius:999px;border:2px solid;cursor:pointer;transition:all 0.18s;display:flex;align-items:center;gap:8px;background:transparent;}
+.ctab.tue-ct{color:var(--tue-red);border-color:var(--tue-red);}
+.ctab.tue-ct:hover,.ctab.tue-ct.active{background:var(--tue-red);color:#fff;}
+.ctab.uu-ct{color:var(--uu-gold-dark);border-color:var(--uu-gold);}
+.ctab.uu-ct:hover,.ctab.uu-ct.active{background:var(--uu-gold);color:var(--text);}
+.ctab img{height:18px;width:auto;object-fit:contain;}
+.ctab.tue-ct img{filter:brightness(0) saturate(100%) invert(18%) sepia(90%) saturate(800%) hue-rotate(340deg) brightness(90%);}
+.ctab.tue-ct:hover img,.ctab.tue-ct.active img{filter:brightness(0) invert(1);}
+.ctab.uu-ct img{filter:brightness(0) saturate(100%) invert(55%) sepia(80%) saturate(600%) hue-rotate(15deg) brightness(75%);}
+.ctab.uu-ct:hover img,.ctab.uu-ct.active img{filter:brightness(0);}
+.g-pane{display:none;}
+.g-pane.active{display:block;}
+.bins-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:1.1rem;}
+.bin-card{border-radius:var(--radius);padding:1.5rem;color:#fff;}
+.bin-card.pmd{background:#b04000;}
+.bin-card.org{background:#24723a;}
+.bin-card.rest{background:#3c4a58;}
+.bin-card.pp{background:#16509a;}
+.bin-card h3{font-family:'Space Grotesk',sans-serif;font-size:0.92rem;font-weight:700;margin-bottom:0.18rem;}
+.bin-sub{font-size:0.67rem;opacity:0.65;text-transform:uppercase;letter-spacing:0.07em;margin-bottom:0.9rem;}
+.bin-card ul{list-style:none;padding:0;}
+.bin-card ul li{font-size:0.8rem;padding:2px 0;opacity:0.88;display:flex;align-items:flex-start;gap:5px;}
+.bin-card ul li::before{content:'✓';font-size:0.65rem;opacity:0.6;margin-top:2px;flex-shrink:0;}
+.bin-card .nope{margin-top:0.7rem;padding-top:0.7rem;border-top:1px solid rgba(255,255,255,0.17);}
+.bin-card .nope li{opacity:0.52;}
+.bin-card .nope li::before{content:'✗';}
+.g-note{margin-top:1.2rem;background:var(--cream-dark);border-radius:var(--radius);padding:1rem 1.2rem;font-size:0.82rem;color:var(--grey);border-left:3px solid var(--green-bright);}
+
+/* TU/e INFO */
+#tue-info{background:var(--tue-red-light);scroll-margin-top:60px;}
+#tue-info h2{color:var(--tue-red-dark);}
+#tue-info .lead{color:#7a3a3a;}
+/* UU INFO */
+#uu-info{background:var(--uu-gold-light);scroll-margin-top:60px;}
+#uu-info h2{color:var(--uu-gold-dark);}
+#uu-info .lead{color:#7a6000;}
+.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.1rem;margin-top:0.5rem;}
+.i-card{border-radius:var(--radius);padding:1.5rem;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,0.06);}
+.i-card .ico{font-size:1.5rem;margin-bottom:0.6rem;}
+.i-card h3{font-family:'Space Grotesk',sans-serif;font-size:0.88rem;font-weight:700;margin-bottom:0.32rem;color:var(--text);}
+.i-card p{font-size:0.8rem;color:var(--grey);line-height:1.65;}
+
+/* GAME */
+#game{background:var(--green-deep);scroll-margin-top:60px;}
+#game h2{color:#fff;}
+#game .lead{color:rgba(255,255,255,0.48);}
+#game .eyebrow{color:var(--green-accent);}
+.cg-toggle{display:flex;gap:6px;margin-bottom:1.5rem;}
+.cg-btn{font-family:'Space Grotesk',sans-serif;font-size:0.8rem;font-weight:700;padding:6px 17px;border-radius:999px;border:2px solid rgba(255,255,255,0.14);cursor:pointer;background:transparent;color:rgba(255,255,255,0.38);transition:all 0.18s;}
+.cg-btn.at{background:var(--tue-red);color:#fff;border-color:var(--tue-red);}
+.cg-btn.au{background:var(--uu-gold);color:var(--text);border-color:var(--uu-gold);}
+.game-box{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:var(--radius-lg);padding:2rem;}
+.g-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;gap:1rem;flex-wrap:wrap;}
+.g-score-txt{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:0.92rem;color:#fff;}
+.g-score-txt span{font-size:1.3rem;}
+.g-pw{flex:1;max-width:230px;background:rgba(255,255,255,0.1);border-radius:999px;height:6px;overflow:hidden;}
+.g-pb{height:100%;border-radius:999px;background:var(--green-accent);transition:width 0.4s ease;width:0%;}
+.g-rl{font-size:0.73rem;color:rgba(255,255,255,0.32);}
+.trash-stage{text-align:center;padding:1.2rem 1rem 1.5rem;}
+.t-emoji{font-size:3.8rem;display:block;margin-bottom:0.45rem;}
+.t-name{font-family:'Space Grotesk',sans-serif;font-size:1.2rem;font-weight:700;color:#fff;}
+.t-note{font-size:0.73rem;color:rgba(255,255,255,0.3);margin-top:0.22rem;}
+.bins-btns{display:grid;grid-template-columns:repeat(4,1fr);gap:0.55rem;margin-bottom:1.1rem;}
+@media(max-width:540px){.bins-btns{grid-template-columns:repeat(2,1fr);}}
+.bbin{border:2px solid transparent;border-radius:10px;padding:0.85rem 0.4rem;cursor:pointer;font-family:'Space Grotesk',sans-serif;font-size:0.74rem;font-weight:600;text-align:center;display:flex;flex-direction:column;align-items:center;gap:0.28rem;transition:transform 0.13s,box-shadow 0.13s;}
+.bbin:hover:not(:disabled){transform:translateY(-3px);box-shadow:0 6px 18px rgba(0,0,0,0.35);}
+.bbin .bi{font-size:1.35rem;}
+.bbin.pb{background:rgba(176,64,0,0.22);color:#f09060;border-color:rgba(176,64,0,0.38);}
+.bbin.ob{background:rgba(36,114,58,0.22);color:#80cc90;border-color:rgba(36,114,58,0.38);}
+.bbin.rb{background:rgba(60,74,88,0.22);color:#9aaabb;border-color:rgba(60,74,88,0.38);}
+.bbin.ppb{background:rgba(22,80,154,0.22);color:#80aadd;border-color:rgba(22,80,154,0.38);}
+.bbin.correct{border-color:#6ddb80!important;box-shadow:0 0 0 3px rgba(109,219,128,0.2);}
+.bbin.wrong{border-color:#f87171!important;box-shadow:0 0 0 3px rgba(248,113,113,0.2);}
+.bbin:disabled{cursor:default;transform:none!important;}
+.fb-panel{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius);padding:1rem 1.2rem;min-height:72px;margin-bottom:1rem;transition:background 0.25s,border-color 0.25s;}
+.fb-panel.idle{opacity:0.38;}
+.fb-panel.correct{background:rgba(109,219,128,0.1);border-color:rgba(109,219,128,0.32);}
+.fb-panel.wrong{background:rgba(248,113,113,0.1);border-color:rgba(248,113,113,0.28);}
+.fb-v{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:0.83rem;margin-bottom:0.28rem;}
+.fb-v.c{color:#6ddb80;}
+.fb-v.w{color:#f87171;}
+.fb-v.i{color:rgba(255,255,255,0.28);font-weight:400;}
+.fb-why{font-size:0.79rem;color:rgba(255,255,255,0.52);line-height:1.55;}
+.g-next-btn,.g-restart-btn{display:block;margin:0 auto;background:var(--green-accent);color:var(--green-deep);border:none;border-radius:8px;padding:0.68rem 2.1rem;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:0.88rem;cursor:pointer;transition:transform 0.13s,background 0.13s;}
+.g-next-btn:hover,.g-restart-btn:hover{background:#9add68;transform:translateY(-2px);}
+.end-screen{text-align:center;padding:1.5rem 0.5rem;}
+.end-screen .ee{font-size:3rem;display:block;margin-bottom:0.7rem;}
+.end-screen .es{font-family:'Space Grotesk',sans-serif;font-size:2.8rem;font-weight:800;color:var(--green-accent);display:block;margin-bottom:0.2rem;}
+.end-screen h3{font-family:'Space Grotesk',sans-serif;font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:0.38rem;}
+.end-screen p{color:rgba(255,255,255,0.48);font-size:0.87rem;margin-bottom:1.4rem;}
+
+/* TIPS */
+#tips{background:var(--cream-dark);scroll-margin-top:60px;}
+.tips-cat{margin-bottom:3rem;}
+.tips-cat:last-child{margin-bottom:0;}
+.tips-cat-hdr{display:flex;align-items:center;gap:10px;margin-bottom:1.2rem;padding-bottom:0.7rem;border-bottom:2px solid;}
+.tips-cat-hdr.sh{border-color:var(--green-bright);}
+.tips-cat-hdr.tc{border-color:var(--tue-red);}
+.tips-cat-hdr.uc{border-color:var(--uu-gold);}
+.tips-cat-logo{height:22px;width:auto;object-fit:contain;}
+.tips-cat-logo.tue{filter:brightness(0) saturate(100%) invert(18%) sepia(90%) saturate(800%) hue-rotate(340deg) brightness(90%);}
+.tips-cat-logo.uu{filter:brightness(0) saturate(100%) invert(60%) sepia(80%) saturate(500%) hue-rotate(10deg) brightness(75%);}
+.tips-cat-lbl{font-family:'Space Grotesk',sans-serif;font-size:0.92rem;font-weight:700;}
+.tips-cat-lbl.sh{color:var(--green-bright);}
+.tips-cat-lbl.tc{color:var(--tue-red);}
+.tips-cat-lbl.uc{color:var(--uu-gold-dark);}
+.tips-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;}
+.tip-card{background:#fff;border-radius:var(--radius);padding:1.35rem;border-top:3px solid;box-shadow:0 1px 7px rgba(0,0,0,0.05);}
+.tip-card.sh{border-top-color:var(--green-bright);}
+.tip-card.tc{border-top-color:var(--tue-red);}
+.tip-card.uc{border-top-color:var(--uu-gold);}
+.tip-ico{font-size:1.35rem;margin-bottom:0.45rem;display:block;}
+.tip-card h3{font-family:'Space Grotesk',sans-serif;font-size:0.86rem;font-weight:700;color:var(--text);margin-bottom:0.28rem;}
+.tip-card p{font-size:0.79rem;color:var(--grey);line-height:1.65;}
+
+/* FOOTER */
+footer{background:var(--text);color:rgba(255,255,255,0.38);padding:3.5rem 2rem;font-size:0.79rem;line-height:1.9;}
+.f-inner{max-width:980px;margin:0 auto;}
+.f-top{display:flex;align-items:flex-start;justify-content:space-between;gap:2rem;margin-bottom:2.5rem;flex-wrap:wrap;}
+.f-brand h4{font-family:'Space Grotesk',sans-serif;font-size:0.97rem;font-weight:700;color:#fff;margin-bottom:0.35rem;}
+.f-brand p{font-size:0.79rem;color:rgba(255,255,255,0.38);max-width:370px;}
+.f-logos{display:flex;gap:1.5rem;align-items:center;flex-shrink:0;}
+.f-logo{height:28px;width:auto;object-fit:contain;}
+.f-logo.tue{filter:brightness(0) saturate(100%) invert(35%) sepia(70%) saturate(400%) hue-rotate(340deg) brightness(90%);}
+.f-logo.uu{filter:brightness(0) invert(1) opacity(0.45);}
+.f-box{background:rgba(255,255,255,0.04);border-radius:var(--radius);padding:1.2rem 1.5rem;margin-bottom:1.25rem;}
+.f-box.gb{border-left:3px solid var(--green-bright);}
+.f-box.ab{border-left:3px solid rgba(255,255,255,0.12);}
+.f-box h5{font-family:'Space Grotesk',sans-serif;font-size:0.67rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:0.45rem;}
+.f-box.gb h5{color:var(--green-accent);}
+.f-box.ab h5{color:rgba(255,255,255,0.3);}
+.f-box p{font-size:0.79rem;color:rgba(255,255,255,0.5);}
+.f-src h5{font-family:'Space Grotesk',sans-serif;font-size:0.67rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:rgba(255,255,255,0.25);margin-bottom:0.7rem;}
+.src-row{padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.05);color:rgba(255,255,255,0.35);}
+.src-row strong{color:rgba(255,255,255,0.58);}
+footer a{color:var(--green-accent);text-decoration:none;}
+footer a:hover{text-decoration:underline;}
+.hidden{display:none!important;}
+@media(max-width:640px){.nav-links{display:none;}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">
+    
+    
+    
+  </div>
+  <ul class="nav-links">
+    <li><a href="#welcome">About</a></li>
+    <li><a href="#guide">Sorting Guide</a></li>
+    <li><a href="#game">Game</a></li>
+    <li><a href="#tips">Tips</a></li>
+  </ul>
+  <ul class="nav-uni">
+    <li><a href="#tue-info" class="t">TU/e Info</a></li>
+    <li><a href="#uu-info"  class="u">UU Info</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  
+  <div class="hero-inner">
+    <div class="collab-badge">
+      <div class="collab-badge-logos">
+        
+        <span style="color:rgba(255,255,255,0.25);font-size:0.85rem">×</span>
+        
+      </div>
+      Inter-university initiative
+    </div>
+    <h1 class="hero-title"><span class="accent">Separate</span><br>Together.</h1>
+    <p class="hero-sub">A joint waste education project by students at TU/e Eindhoven and Utrecht University. Because a zero-waste campus takes everyone.</p>
+    <div class="hero-cards">
+      <div class="h-card tue-c">
+        
+        <h3>TU/e Let's Go Zero</h3>
+        <ul>
+          <li>Zero-waste university target: 2030</li>
+          <li>Tulip collection stations replace desk bins</li>
+          <li>PMD stream replacing plastic-only collection</li>
+          <li>Billie Cup replaces disposable coffee cups</li>
+          <li>Atlas restaurant joined "Too Good To Go"</li>
+          <li>840 g CO₂ saved per kg kept from incineration</li>
+        </ul>
+      </div>
+      <div class="h-card uu-c">
+        
+        <h3>UU Scheid Zooi</h3>
+        <ul>
+          <li>Zero-waste operations target: 2030</li>
+          <li>"Scheid Zooi" campaign drives sorting awareness</li>
+          <li>Dedicated lab-plastic collection in faculties</li>
+          <li>Circular procurement programme in place</li>
+          <li>Separate GFT, paper, plastic &amp; residual streams</li>
+          <li>Materials reuse point for furniture &amp; equipment</li>
+        </ul>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="h-stat"><strong>840 g</strong><small>CO₂ saved<br>per kg recycled</small></div>
+      <div class="h-stat"><strong>2030</strong><small>Shared<br>zero-waste goal</small></div>
+      <div class="h-stat"><strong>2 unis</strong><small>One shared<br>purpose</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- GAME -->
+<section class="section" id="game">
+  <div class="s-inner">
+    <div class="eyebrow g">Interactive</div>
+    <h2>Test your sorting skills</h2>
+    <p class="lead">Pick your campus and sort 12 items correctly. Each answer explains exactly why it was right or wrong.</p>
+    <div class="cg-toggle">
+      <button class="cg-btn at" id="cg-tue" onclick="setCampus('tue')">TU/e rules</button>
+      <button class="cg-btn"    id="cg-uu"  onclick="setCampus('uu')">UU rules</button>
+    </div>
+    <div class="game-box">
+      <div class="g-top">
+        <div class="g-score-txt">Score: <span id="g-snum">0</span></div>
+        <div class="g-pw"><div class="g-pb" id="g-pb"></div></div>
+        <div class="g-rl" id="g-rl">Round 1 of 12</div>
+      </div>
+      <div id="g-play">
+        <div class="trash-stage">
+          <span class="t-emoji" id="g-emoji">🍌</span>
+          <div class="t-name" id="g-name">Banana peel</div>
+          <div class="t-note" id="g-note">Sorting for TU/e campus</div>
+        </div>
+        <div class="bins-btns" id="g-bins"></div>
+        <div class="fb-panel idle" id="g-fb">
+          <div class="fb-v i" id="fb-v">Pick a bin above</div>
+          <div class="fb-why" id="fb-w"></div>
+        </div>
+        <button class="g-next-btn hidden" id="g-next" onclick="nextRound()">Next item →</button>
+      </div>
+      <div class="end-screen hidden" id="g-end">
+        <span class="ee" id="end-ee">🏆</span>
+        <span class="es" id="end-es">12 / 12</span>
+        <h3 id="end-t">Perfect!</h3>
+        <p id="end-m">You know the rules inside out.</p>
+        <button class="g-restart-btn" onclick="restartGame()">Play again</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WELCOME -->
+<section class="section" id="welcome">
+  <div class="s-inner">
+    <div class="eyebrow g">What this is about</div>
+    <h2 style="color:#fff">Why sorting matters and what both campuses are already doing</h2>
+    <p class="lead">Both TU/e and UU have been actively cutting waste at the source. Here is what is already in place, and where you come in.</p>
+    <div class="w-grid">
+      <div class="w-card sh">
+        <div class="w-eyebrow g">Shared goal</div>
+        <h3>Every correctly sorted item is a win</h3>
+        <p>When waste is separated properly it can be reused or recycled, turning it back into raw material instead of burning it. Each kilogram that avoids incineration saves 840 grams of CO₂. Both universities have committed to zero waste by 2030, and every person on campus plays a role.</p>
+      </div>
+      <div class="w-card tc">
+        
+        <div class="w-eyebrow r">TU/e progress</div>
+        <h3>Eindhoven campus</h3>
+        <ul>
+          <li>Tulip collection stations installed across all buildings</li>
+          <li>PMD stream introduced alongside old plastic stream</li>
+          <li>Single-use plastics banned on campus</li>
+          <li>Billie Cup replaces disposable cups campus-wide</li>
+          <li>Chain cooperation with Asito, Vermaat &amp; Appèl: 120 kg of plastic saved per year</li>
+        </ul>
+      </div>
+      <div class="w-card uc">
+        
+        <div class="w-eyebrow gd">UU progress</div>
+        <h3>Utrecht campus</h3>
+        <ul>
+          <li>Scheid Zooi campaign launched to educate staff &amp; students</li>
+          <li>Dedicated lab-plastic stream introduced in faculties</li>
+          <li>Materials transit point for reuse of furniture &amp; equipment</li>
+          <li>Circular procurement guidelines for suppliers</li>
+          <li>Waste scans conducted to identify and reduce residual streams</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SORTING GUIDE -->
+<section class="section" id="guide">
+  <div class="s-inner">
+    <div class="eyebrow gr">Campus-specific rules</div>
+    <h2>What goes where</h2>
+    <p class="lead">The four main streams are shared by both universities, but specific items are sorted differently. Select your campus below to see the rules that apply to you.</p>
+    <div class="c-tabs">
+      <button class="ctab tue-ct active" onclick="switchGuide('tue',this)">
+        TU/e Eindhoven
+      </button>
+      <button class="ctab uu-ct" onclick="switchGuide('uu',this)">
+        UU Utrecht
+      </button>
+    </div>
+
+    <div class="g-pane active" id="gpane-tue">
+      <div class="bins-grid">
+        <div class="bin-card pmd">
+          <h3>🟠 Plastic &amp; Carton (PMD)</h3><div class="bin-sub">Must be empty</div>
+          <ul><li>Empty PET / drink bottle</li><li>Empty drink carton</li><li>Empty snack package</li></ul>
+          <div class="nope"><ul><li>Foam, aluminium → Other waste</li><li>Mixed packages → Other waste</li></ul></div>
+        </div>
+        <div class="bin-card org">
+          <h3>🟢 Organic</h3><div class="bin-sub">Food &amp; natural waste</div>
+          <ul><li>Food leftovers</li><li>Fruit scraps &amp; peels</li><li>Tea bags</li><li>Coffee grounds</li></ul>
+          <div class="nope"><ul><li>Food packaging → PMD bin</li><li>Bio-plastics → Other waste</li></ul></div>
+        </div>
+        <div class="bin-card rest">
+          <h3>⚫ Other Waste</h3><div class="bin-sub">Residual</div>
+          <ul><li>Dirty paper &amp; cardboard</li><li>Wooden cutlery</li><li>Cans, bags of chips</li><li>Tissues (used or clean)</li><li>Bio-plastics</li><li>Aluminium foil</li></ul>
+          <div class="nope"><ul><li>Glass → Separate container</li><li>Batteries → Separate point</li></ul></div>
+        </div>
+        <div class="bin-card pp">
+          <h3>🔵 Paper</h3><div class="bin-sub">Dry only</div>
+          <ul><li>Printing paper</li><li>Newspaper</li><li>Window envelope</li><li>Cardboard (clean &amp; dry)</li></ul>
+          <div class="nope"><ul><li>Pizza box → Other waste</li><li>Greasy paper → Other waste</li></ul></div>
+        </div>
+      </div>
+      <div class="g-note">🌷 <strong>Tulip stations:</strong> Individual desk bins have been replaced. Look for a Tulip collection point, one per 25 workplaces. Glass and batteries have dedicated separate containers on campus.</div>
+    </div>
+
+    <div class="g-pane" id="gpane-uu">
+      <div class="bins-grid">
+        <div class="bin-card pmd">
+          <h3>🟠 Plastic</h3><div class="bin-sub">Soft &amp; film plastic</div>
+          <ul><li>Plastic drink bottle (non-deposit)</li><li>Transparent plastic food packaging</li><li>Plastic bags &amp; sandwich bags</li><li>Chips bag / snack wrapper</li><li>Transparent or white plastic cup</li><li>Plastic food container</li></ul>
+          <div class="nope"><ul><li>Hard plastic → Residual waste</li><li>Mixed paper/plastic → Residual</li></ul></div>
+        </div>
+        <div class="bin-card org">
+          <h3>🟢 GFT (Organic)</h3><div class="bin-sub">Food, garden &amp; organic</div>
+          <ul><li>Fruit &amp; vegetable scraps</li><li>Tea bags &amp; coffee grounds</li><li>Bread, pasta, cooked food</li><li>Nuts, eggshells</li><li>Plants &amp; leaves</li></ul>
+          <div class="nope"><ul><li>Compostable cutlery → Residual</li><li>Paper straw → Residual</li></ul></div>
+        </div>
+        <div class="bin-card rest">
+          <h3>⚫ Residual Waste</h3><div class="bin-sub">Everything else</div>
+          <ul><li>Used / dirty tissue</li><li>Wooden or compostable cutlery</li><li>Aluminium foil &amp; lids</li><li>Mixed-material packaging</li><li>Hard plastic</li><li>Greasy pizza box</li></ul>
+        </div>
+        <div class="bin-card pp">
+          <h3>🔵 Paper</h3><div class="bin-sub">Dry &amp; clean</div>
+          <ul><li>Printing / office paper</li><li>Newspaper &amp; magazine</li><li>Cardboard &amp; envelopes</li><li>Clean (unused) tissue</li><li>Clean pizza box</li><li>Clean paper coffee filter</li></ul>
+          <div class="nope"><ul><li>Greasy or dirty paper → Residual</li></ul></div>
+        </div>
+      </div>
+      <div class="g-note">♻️ <strong>UU reminder:</strong> At Utrecht, chips bags go in <strong>plastic</strong> and a clean pizza box goes in <strong>paper</strong> two of the most common sorting mistakes made by people coming from TU/e.</div>
+    </div>
+  
+<!-- TRY AGAIN CTA -->
+<div style="margin-top:2.5rem;background:var(--green-deep);border-radius:var(--radius-lg);padding:2rem 2.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.25rem;">
+  <div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:1.05rem;font-weight:700;color:#fff;margin-bottom:0.3rem;">Now that you know the rules, put them to the test.</div>
+    <div style="font-size:0.85rem;color:rgba(255,255,255,0.5);">Head back to the sorting game and see if your score improves.</div>
+  </div>
+  <a href="#game" style="display:inline-block;background:var(--green-accent);color:var(--green-deep);font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:0.9rem;padding:0.7rem 2rem;border-radius:8px;text-decoration:none;white-space:nowrap;">Play the game again &#8594;</a>
+</div>
+</div>
+</section>
+<!-- TU/e INFO -->
+<section class="section" id="tue-info">
+  <div class="s-inner">
+    
+    <div class="eyebrow r">Eindhoven University of Technology</div>
+    <h2>TU/e: Waste management in depth</h2>
+    <p class="lead">Everything you need to know about how waste is handled across the TU/e campus.</p>
+    <div class="info-grid">
+      <div class="i-card"><div class="ico">🌷</div><h3>Tulip Collection Stations</h3><p>Individual desk bins have been removed and replaced by central Tulip stations, one per 25 workplaces. Each has clearly labelled openings for PMD, organic, other waste and paper.</p></div>
+      <div class="i-card"><div class="ico">♻️</div><h3>PMD Stream</h3><p>TU/e introduced the PMD stream (Plastic, Metal &amp; Drink cartons) with the help of Renewi, replacing the older plastic-only collection. All emptied plastic bottles and drink cartons go here.</p></div>
+      <div class="i-card"><div class="ico">☕</div><h3>The Billie Cup</h3><p>Disposable coffee cups are no longer available on campus. The reusable Billie Cup has replaced them at TU/e coffee machines. Return it to the designated collection point rather than any bin.</p></div>
+      <div class="i-card"><div class="ico">🚫</div><h3>No Single-Use Plastics</h3><p>Single-use plastic items are banned across the entire TU/e campus. Facilities provide homogeneous packaging materials to make proper sorting easier at the point of disposal.</p></div>
+      <div class="i-card"><div class="ico">🍽️</div><h3>Food Waste Reduction</h3><p>The Atlas restaurant has joined "Too Good To Go" so surplus food finds a home. Caterer Vermaat adapted their menus and banqueting folder to reduce preparation waste.</p></div>
+      <div class="i-card"><div class="ico">⚗️</div><h3>Hazardous Waste</h3><p>TU/e's Chemical Distribution Center and Recycling Center handle all chemical and hazardous waste. Hazardous waste is transported daily from building depots to the CDC for safe disposal.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- UU INFO -->
+<section class="section" id="uu-info">
+  <div class="s-inner">
+    
+    <div class="eyebrow gd">Utrecht University</div>
+    <h2>UU: Waste management in depth</h2>
+    <p class="lead">How Utrecht University approaches zero-waste operations across its campus and faculties.</p>
+    <div class="info-grid">
+      <div class="i-card"><div class="ico">🗂️</div><h3>Scheid Zooi Campaign</h3><p>UU's "Scheid Zooi" (Separate Your Stuff) campaign raises awareness among students, staff and visitors. It provides clear sorting guidance and an online tool to look up where any item belongs.</p></div>
+      <div class="i-card"><div class="ico">🧪</div><h3>Lab Plastic Collection</h3><p>UU has introduced a dedicated stream for lab-use plastic so it gets a second life rather than being incinerated. Look for the lab-plastic collection point in your faculty building.</p></div>
+      <div class="i-card"><div class="ico">🪑</div><h3>Materials Reuse Point</h3><p>A transit point for materials allows furniture, office equipment and other items to be passed on for reuse rather than discarded, supporting the university's circular procurement goals.</p></div>
+      <div class="i-card"><div class="ico">🛒</div><h3>Circular Procurement</h3><p>UU works with suppliers to ensure purchased goods are designed for a longer life and easier recycling. Packaging requirements are built into supplier agreements.</p></div>
+      <div class="i-card"><div class="ico">📊</div><h3>Waste Scans</h3><p>Regular waste scans assess what is being thrown away and where. Results inform targeted campaigns and infrastructure changes to reduce the amount of residual waste produced.</p></div>
+      <div class="i-card"><div class="ico">🤝</div><h3>Student Collaboration</h3><p>UU actively works with students to gain insight into campus waste patterns. Student projects feed directly into the zero-waste programme's next steps and policy decisions.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TIPS -->
+<section class="section" id="tips">
+  <div class="s-inner">
+    <div class="eyebrow gr">Good habits</div>
+    <h2>Practical tips, sorted by campus</h2>
+    <p class="lead">What applies everywhere, what is specific to Eindhoven, and what is specific to Utrecht.</p>
+
+    <div class="tips-cat">
+      <div class="tips-cat-hdr sh">
+        <span class="tips-cat-lbl sh">♻️ Both universities</span>
+      </div>
+      <div class="tips-grid">
+        <div class="tip-card sh"><span class="tip-ico">🫙</span><h3>Empty before you sort</h3><p>Plastic bottles and drink cartons must be rinsed and empty before going in the plastic/PMD bin. Liquid residue contaminates the entire recycling stream and renders it unusable.</p></div>
+        <div class="tip-card sh"><span class="tip-ico">🌿</span><h3>Bio-plastics ≠ organic</h3><p>"Compostable" or bio-plastic packaging goes to residual waste at both universities. Campus composting systems cannot process it. Look at the actual material, not the marketing label.</p></div>
+        <div class="tip-card sh"><span class="tip-ico">🍕</span><h3>Greasy cardboard is residual</h3><p>Once a box or wrapper is greasy it cannot be recycled as paper at either university. When in doubt about cleanliness, it goes in residual waste. Always the safer choice.</p></div>
+        <div class="tip-card sh"><span class="tip-ico">🔋</span><h3>Batteries always go separate</h3><p>Batteries, e-cigarettes and small electronics should never enter any of the four main bins. Both campuses have dedicated collection points. Find yours before you need to dispose of one.</p></div>
+      </div>
+    </div>
+
+    <div class="tips-cat">
+      <div class="tips-cat-hdr tc">
+        
+        <span class="tips-cat-lbl tc">TU/e specific Eindhoven</span>
+      </div>
+      <div class="tips-grid">
+        <div class="tip-card tc"><span class="tip-ico">🌷</span><h3>Find your Tulip</h3><p>Your desk bin is gone. Tulip central collection stations are placed throughout every TU/e building, one per 25 workplaces. Take the extra steps; the sorting infrastructure is there for a reason.</p></div>
+        <div class="tip-card tc"><span class="tip-ico">☕</span><h3>Use and return the Billie Cup</h3><p>Disposable cups are no longer on campus. Borrow a Billie Cup from the coffee machine and return it to the designated collection point, not the bin, when you are finished.</p></div>
+        <div class="tip-card tc"><span class="tip-ico">🛍️</span><h3>Chips bags → Other Waste at TU/e</h3><p>At TU/e, snack wrappers and chips bags go in Other Waste, not the PMD bin. This differs from UU. Keep it in mind if you study or work at both campuses.</p></div>
+        <div class="tip-card tc"><span class="tip-ico">🍽️</span><h3>Too Good To Go at Atlas</h3><p>The Atlas restaurant uses "Too Good To Go" to prevent food waste at the end of each day. Download the app and grab surplus meals at a reduced price rather than seeing good food discarded.</p></div>
+      </div>
+    </div>
+
+    <div class="tips-cat">
+      <div class="tips-cat-hdr uc">
+        
+        <span class="tips-cat-lbl uc">UU specific Utrecht</span>
+      </div>
+      <div class="tips-grid">
+        <div class="tip-card uc"><span class="tip-ico">🛍️</span><h3>Chips bags → Plastic at UU</h3><p>At UU, snack wrappers and chips bags go in the plastic bin, unlike TU/e where they are Other Waste. One of the most common sorting mix-ups between the two campuses.</p></div>
+        <div class="tip-card uc"><span class="tip-ico">🧻</span><h3>Clean tissue → Paper at UU</h3><p>An unused, clean tissue goes in the paper bin at Utrecht. At TU/e all tissues go in Other Waste regardless. The rule at UU only changes once a tissue has actually been used. Dirty ones are always residual.</p></div>
+        <div class="tip-card uc"><span class="tip-ico">🍕</span><h3>Clean pizza box → Paper at UU</h3><p>A completely clean pizza box goes in the paper bin at UU. At TU/e it is Other Waste. If there is any grease at all, it is residual waste at both universities.</p></div>
+        <div class="tip-card uc"><span class="tip-ico">🧪</span><h3>Lab plastic has its own stream</h3><p>If you work in a UU lab, look for the dedicated lab-plastic collection in your faculty building. These plastics should not go in the general plastic bin. They need a separate stream.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="f-inner">
+    <div class="f-top">
+      <div class="f-brand">
+        <h4>Separate Together TU/e × UU</h4>
+        <p>An inter-university waste education artefact created as part of the Opportunity for Change project.</p>
+      </div>
+      
+    </div>
+    <div class="f-box gb">
+      <h5>Project group</h5>
+      <p>Sasha de Miranda &nbsp;·&nbsp; Ebba Piekaar &nbsp;·&nbsp; Simon Humphrey-Reverdy &nbsp;·&nbsp; Esmee Gunnewijk</p>
+    </div>
+    <div class="f-box ab">
+      <h5>AI use statement</h5>
+      <p>This website was developed with the assistance of AI (Claude by Anthropic) for coding, layout and content structuring. All waste management information has been sourced directly from official TU/e and UU sustainability publications. The educational content, project framing and design direction were determined by the student group.</p>
+    </div>
+    <div class="f-src">
+      <h5>Sources</h5>
+      <div class="src-row"><strong>[1]</strong> TU/e Best Practices: Let's Go Zero. Eindhoven University of Technology, Sustainability. <em>Best_Practices-4.pdf</em> (provided document).</div>
+      <div class="src-row"><strong>[2]</strong> TU/e Campaign "Let's Go Zero". <a href="https://www.tue.nl/en/our-university/about-the-university/sustainability/operations/circular-and-restorative-resources/campaign-lets-go-zero/" target="_blank">tue.nl/…/campaign-lets-go-zero</a></div>
+      <div class="src-row"><strong>[3]</strong> TU/e Waste Sorting Infographic. TU/e Facilities Management (image provided).</div>
+      <div class="src-row"><strong>[4]</strong> UU "Scheid Zooi": Waste Separation Guide. <a href="https://www.uu.nl/organisatie/zero-waste/afval-scheiden" target="_blank">uu.nl/organisatie/zero-waste/afval-scheiden</a></div>
+      <div class="src-row"><strong>[5]</strong> UU: "Reducing waste through better separation". <a href="https://www.uu.nl/nieuws/afval-verminderen-door-beter-scheiden" target="_blank">uu.nl/nieuws/afval-verminderen-door-beter-scheiden</a></div>
+      <div class="src-row"><strong>[6]</strong> UU Zero Waste Programme. <a href="https://www.uu.nl/organisatie/zero-waste" target="_blank">uu.nl/organisatie/zero-waste</a></div>
+    </div>
+    <p style="margin-top:1.5rem;font-size:0.71rem;opacity:0.22">© Eindhoven University of Technology &amp; Utrecht University · Educational project · All waste rules sourced from official university publications</p>
+  </div>
+</footer>
+
+<script>
+const ITEMS_TUE=[
+  {emoji:'🍌',name:'Banana peel',bin:'org',cw:'Fruit scraps are food waste and go in the organic bin at TU/e.',ww:'Fruit and vegetable scraps are organic waste they belong in the organic bin at TU/e, not with residual waste.'},
+  {emoji:'🧃',name:'Empty drink carton',bin:'pmd',cw:'Empty drink cartons go in the PMD bin at TU/e make sure it is empty and rinsed first.',ww:'Drink cartons belong in the PMD (Plastic, Metal & Drink carton) bin at TU/e.'},
+  {emoji:'📰',name:'Newspaper',bin:'pp',cw:'Dry newspapers go in the paper bin at TU/e as long as they are clean and dry.',ww:'Clean, dry paper and newspapers always go in the paper bin at TU/e.'},
+  {emoji:'🍕',name:'Greasy pizza box',bin:'rest',cw:'Greasy or dirty cardboard cannot be recycled and goes in Other Waste at TU/e.',ww:'Grease prevents paper recycling a greasy pizza box is always Other Waste at TU/e.'},
+  {emoji:'🍴',name:'Wooden cutlery',bin:'rest',cw:'Wooden cutlery goes in Other Waste at TU/e it cannot be processed in the organic stream.',ww:'Even though it feels natural, wooden cutlery is Other Waste at TU/e.'},
+  {emoji:'🍵',name:'Tea bag',bin:'org',cw:'Tea bags count as organic waste at TU/e and go in the organic bin.',ww:'Tea bags are organic waste at TU/e they belong in the organic bin.'},
+  {emoji:'📄',name:'Printing paper',bin:'pp',cw:'Clean office paper goes in the paper bin at TU/e.',ww:'Clean, dry printing paper always belongs in the paper bin at TU/e.'},
+  {emoji:'🧴',name:'Empty shampoo bottle',bin:'pmd',cw:'Empty plastic bottles go in the PMD bin at TU/e rinse it out before sorting.',ww:'Empty plastic bottles go in the PMD bin at TU/e, not Other Waste.'},
+  {emoji:'🍟',name:'Chips bag',bin:'rest',cw:'Chips bags go in Other Waste at TU/e. This differs from UU, where they go in the plastic bin!',ww:'At TU/e, chips bags are Other Waste a common mix-up with UU where they go in the plastic bin.'},
+  {emoji:'🧻',name:'Used tissue',bin:'rest',cw:'Used tissues go in Other Waste at TU/e.',ww:'Tissues whether used or clean go in Other Waste at TU/e.'},
+  {emoji:'✉️',name:'Window envelope',bin:'pp',cw:'Window envelopes go in the paper bin at TU/e. The small plastic window does not contaminate the paper stream.',ww:'Window envelopes belong in the paper bin at TU/e.'},
+  {emoji:'🌿',name:'Fruit scraps',bin:'org',cw:'All food scraps including fruit waste go in the organic bin at TU/e.',ww:'Food waste like fruit scraps always belongs in the organic bin at TU/e.'},
+];
+
+const ITEMS_UU=[
+  {emoji:'🍌',name:'Banana peel',bin:'org',cw:'Fruit scraps are food waste and go in the GFT (organic) bin at UU.',ww:'Fruit and vegetable scraps are GFT (organic) waste at UU they belong in the organic bin.'},
+  {emoji:'🧃',name:'Empty drink carton',bin:'pmd',cw:'Drink cartons go in the plastic bin at UU make sure it is empty first.',ww:'Drink cartons belong in the plastic bin at UU.'},
+  {emoji:'📰',name:'Newspaper',bin:'pp',cw:'Dry newspapers go in the paper bin at UU.',ww:'Clean, dry paper always goes in the paper bin at UU.'},
+  {emoji:'🍕',name:'Greasy pizza box',bin:'rest',cw:'A greasy pizza box is residual waste at UU grease prevents paper recycling.',ww:'Once a pizza box is greasy it is residual waste at UU. Only completely clean boxes go in paper.'},
+  {emoji:'🍕',name:'Clean pizza box',bin:'pp',cw:'A completely clean pizza box goes in the paper bin at UU. This differs from TU/e where it goes in Other Waste!',ww:'At UU, a clean pizza box belongs in paper. Only greasy ones are residual this is different from TU/e.'},
+  {emoji:'🍴',name:'Wooden cutlery',bin:'rest',cw:'Wooden cutlery is residual waste at UU it cannot be composted in the organic stream.',ww:'Wooden cutlery is residual waste at UU, even though it feels natural.'},
+  {emoji:'🍵',name:'Tea bag',bin:'org',cw:'Tea bags are GFT (organic) waste at UU and go in the organic bin.',ww:'Tea bags are organic (GFT) waste at UU they go in the organic bin.'},
+  {emoji:'🧴',name:'Empty plastic bottle',bin:'pmd',cw:'Empty plastic bottles go in the plastic bin at UU rinse before sorting.',ww:'Empty plastic bottles belong in the plastic bin at UU.'},
+  {emoji:'🍟',name:'Chips bag',bin:'pmd',cw:'Chips bags go in the plastic bin at UU. This differs from TU/e, where they are Other Waste!',ww:'At UU, chips bags go in the plastic bin, unlike TU/e where they are Other Waste. A very common mix-up!'},
+  {emoji:'🧻',name:'Clean (unused) tissue',bin:'pp',cw:'A clean, unused tissue goes in the paper bin at UU. This differs from TU/e where all tissues are Other Waste!',ww:'At UU, a clean tissue goes in the paper bin different from TU/e where all tissues are Other Waste.'},
+  {emoji:'✉️',name:'Window envelope',bin:'pp',cw:'Window envelopes go in the paper bin at UU.',ww:'Window envelopes belong in the paper bin at UU.'},
+  {emoji:'🌿',name:'Fruit scraps',bin:'org',cw:'Fruit scraps are GFT (organic) waste at UU and go in the organic bin.',ww:'Fruit and vegetable scraps are organic (GFT) waste at UU.'},
+];
+
+const BINS_TUE=[{id:'pmd',lbl:'Plastic & Carton',ico:'🟠',cls:'pb'},{id:'org',lbl:'Organic',ico:'🟢',cls:'ob'},{id:'rest',lbl:'Other Waste',ico:'⚫',cls:'rb'},{id:'pp',lbl:'Paper',ico:'🔵',cls:'ppb'}];
+const BINS_UU =[{id:'pmd',lbl:'Plastic',ico:'🟠',cls:'pb'},{id:'org',lbl:'GFT',ico:'🟢',cls:'ob'},{id:'rest',lbl:'Residual',ico:'⚫',cls:'rb'},{id:'pp',lbl:'Paper',ico:'🔵',cls:'ppb'}];
+
+let campus='tue',order=[],cur=0,score=0,answered=false;
+function shuffle(a){const b=[...a];for(let i=b.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]];}return b;}
+
+function setCampus(c){
+  campus=c;
+  document.getElementById('cg-tue').className='cg-btn'+(c==='tue'?' at':'');
+  document.getElementById('cg-uu').className ='cg-btn'+(c==='uu' ?' au':'');
+  restartGame();
+}
+
+function buildBins(){
+  const bins=campus==='tue'?BINS_TUE:BINS_UU;
+  document.getElementById('g-bins').innerHTML=bins.map(b=>`<button class="bbin ${b.cls}" id="gb-${b.id}" onclick="guess('${b.id}')"><span class="bi">${b.ico}</span>${b.lbl}</button>`).join('');
+}
+
+function idleFB(){
+  const p=document.getElementById('g-fb');
+  p.className='fb-panel idle';
+  document.getElementById('fb-v').className='fb-v i';
+  document.getElementById('fb-v').textContent='Pick a bin above';
+  document.getElementById('fb-w').textContent='';
+}
+
+function restartGame(){
+  order=shuffle(campus==='tue'?ITEMS_TUE:ITEMS_UU);
+  cur=0;score=0;answered=false;
+  document.getElementById('g-end').classList.add('hidden');
+  document.getElementById('g-play').classList.remove('hidden');
+  document.getElementById('g-next').classList.add('hidden');
+  buildBins();renderRound();
+}
+
+function renderRound(){
+  const it=order[cur];
+  document.getElementById('g-emoji').textContent=it.emoji;
+  document.getElementById('g-name').textContent=it.name;
+  document.getElementById('g-note').textContent='Sorting for '+(campus==='tue'?'TU/e campus':'UU campus');
+  document.getElementById('g-snum').textContent=score;
+  document.getElementById('g-rl').textContent=`Round ${cur+1} of ${order.length}`;
+  document.getElementById('g-pb').style.width=`${(cur/order.length)*100}%`;
+  (campus==='tue'?BINS_TUE:BINS_UU).forEach(b=>{const el=document.getElementById('gb-'+b.id);if(el){el.classList.remove('correct','wrong');el.disabled=false;}});
+  idleFB();answered=false;
+}
+
+function guess(bin){
+  if(answered)return;
+  answered=true;
+  const it=order[cur];
+  const ok=it.bin===bin;
+  (campus==='tue'?BINS_TUE:BINS_UU).forEach(b=>{const el=document.getElementById('gb-'+b.id);if(el)el.disabled=true;});
+  const ce=document.getElementById('gb-'+it.bin);
+  const ge=document.getElementById('gb-'+bin);
+  if(ok){if(ce)ce.classList.add('correct');score++;}
+  else{if(ge)ge.classList.add('wrong');if(ce)ce.classList.add('correct');}
+  const p=document.getElementById('g-fb');
+  const v=document.getElementById('fb-v');
+  const w=document.getElementById('fb-w');
+  if(ok){p.className='fb-panel correct';v.className='fb-v c';v.textContent='✓ Correct!';w.textContent=it.cw;}
+  else   {p.className='fb-panel wrong';v.className='fb-v w';v.textContent='✗ Not quite.';w.textContent=it.ww;}
+  document.getElementById('g-snum').textContent=score;
+  if(cur+1>=order.length)setTimeout(showEnd,1100);
+  else document.getElementById('g-next').classList.remove('hidden');
+}
+
+function nextRound(){cur++;document.getElementById('g-next').classList.add('hidden');renderRound();}
+
+function showEnd(){
+  document.getElementById('g-next').classList.add('hidden');
+  document.getElementById('g-play').classList.add('hidden');
+  document.getElementById('g-pb').style.width='100%';
+  document.getElementById('g-rl').textContent='Done!';
+  const pct=score/order.length;
+  document.getElementById('end-es').textContent=`${score} / ${order.length}`;
+  if(pct===1){document.getElementById('end-ee').textContent='🏆';document.getElementById('end-t').textContent='Perfect score!';document.getElementById('end-m').textContent=`You know the ${campus==='tue'?'TU/e':'UU'} rules inside out. The campus thanks you!`;}
+  else if(pct>=0.75){document.getElementById('end-ee').textContent='🌿';document.getElementById('end-t').textContent='Great effort!';document.getElementById('end-m').textContent='Almost perfect revisit the Sorting Guide for any items you missed.';}
+  else{document.getElementById('end-ee').textContent='📚';document.getElementById('end-t').textContent='Keep learning!';document.getElementById('end-m').textContent='Head back to the Sorting Guide, then give it another try.';}
+  document.getElementById('g-end').classList.remove('hidden');
+}
+
+function switchGuide(tab,btn){
+  document.querySelectorAll('.g-pane').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.ctab').forEach(b=>b.classList.remove('active'));
+  document.getElementById('gpane-'+tab).classList.add('active');
+  btn.classList.add('active');
+}
+
+restartGame();
+</script>
+</body>
+</html>
